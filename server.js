@@ -11,9 +11,9 @@ app.use(bodyParser.json());
 
 app.post('/whatsapp', async (req, res) => {
     try {
-        console.log("message for cyclic: ", req.body);
-        console.log("message: ", req.body.body);
-        const response = await generateChatResponse(req.body.body);
+        console.log("message for cyclic: ", req.body.Body);
+        // console.log("message: ", req.body.body);
+        const response = await generateChatResponse(req.body.Body);
         console.log("reply: ", response);
 
         resp = new MessagingResponse();
